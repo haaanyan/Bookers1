@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     background-color: #fff;
     color: #333;
@@ -10,6 +17,8 @@ body {
     line-height: 18px;
     margin: 33px;
 }
+
+
 
 p {
     display: block;
@@ -101,4 +110,50 @@ div.field, div.actions {
 form {
     display: block;
     margin-top: 0em;
+}
+
+
+.success-massage{
+	color: green;
+}
+
+
+.error{
+	width: 450px;
+	border: 2px solid red;
+	font-family: verdana, arial, helvetica, sans-serif;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+}
+.error-headline{
+	background: red;
+	color: white;
+	padding: 5px 5px 5px 15px;
+	margin: 0;
+	font-weight: bold;
+}
+
+.error-list{
+	padding: 40px;
+	margin: 0 33px;
+	background-color: #f0f0f0;
+	list-style: square;
+}
+.error-li{
+	font-size: 13px;
+}
+.field_with_errors{
+	background-color: red;
+	display: table;
+	padding: 5px;
+}
+
+h4 {
+    font-family: Verdana;
+    font-weight: normal;
+}
+
+
+.new_item, .edit_item, .link {
+    margin: 10px;
 }

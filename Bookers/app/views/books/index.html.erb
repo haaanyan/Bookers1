@@ -1,6 +1,7 @@
 <body>
+  <main class="index">
   <% if flash[:notice] %>
-   <p><%= flash[:notice] %></p>
+   <p class="success-massage"><%= flash[:notice] %></p>
    <% end %>
   <h1>Books</h1>
   <table>
@@ -29,6 +30,7 @@
       </tr>
 　　 </tbody>
 　　</table>
+　</main>
 
 　　<h2>New book</h2>
 　　<% if @book.errors.any? %>
@@ -42,10 +44,17 @@
   			</div>
 		<% end %>
 　　 <%= form_with model: @book, url:'/books', local:true do |book| %>
-　　 <h4>Title</h4>
-　　 <%= book.text_field :title %>
-　　 <h4>body</h4>
-　　 <%= book.text_area :body %>
-　　 <%= book.submit 'Create Book' %>
+　　  <div class="new-item">
+　　   <h4>Title</h4>
+　　   <%= book.text_field :title %>
+　　  </div>
+　　  <div class="new-item">
+　　   <h4>Body</h4>
+　　   <%= book.text_area :body %>
+　　 </div>
+　　 <div class="new-item">
+　　   <%= book.submit 'Create Book' %>
+　　 </div>
 　　<% end %>
+
 </body>
